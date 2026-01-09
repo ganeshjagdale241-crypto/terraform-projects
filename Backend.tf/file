@@ -1,1 +1,8 @@
-
+terraform {
+  backend "azurerm" {
+    storage_account_name = "clistorageaccount6002" #change this
+    container_name = "backend-storage-2" #Create container in storage account and put that container name here to store state file
+    key = "terraform.tfstate"
+    access_key = "     " #get this from storage account
+  }
+}
